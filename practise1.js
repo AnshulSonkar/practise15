@@ -448,18 +448,46 @@ console.log(age);
 
 
 // Example 
-let students = [
-  { name: "Anshu", marks: 80 },
-  { name: "Rahul", marks: 45 },
-  { name: "Priya", marks: 90 }
-];
+// let students = [
+//   { name: "Anshu", marks: 80 },
+//   { name: "Rahul", marks: 45 },
+//   { name: "Priya", marks: 90 }
+// ];
 
-// only passed students
-let passed = students.filter(s => s.marks >= 50);
+// // only passed students
+// let passed = students.filter(s => s.marks >= 50);
 
-console.log(passed);
+// console.log(passed);
 
-// Total marks
-let totalMarks = students.reduce((sum, s) => sum + s.marks, 0);
+// // Total marks
+// let totalMarks = students.reduce((sum, s) => sum + s.marks, 0);
 
-console.log("Total Marks:", totalMarks);
+// console.log("Total Marks:", totalMarks);
+
+
+
+
+
+
+
+
+// // 
+// let { name: studentName } = student;
+
+// console.log(studentName);
+
+
+
+
+// real example
+let student = {
+  name: "Anshu",
+  marks: 85
+};
+
+let updatedStudent = {
+  ...student,
+  marks: 90
+};
+
+console.log(updatedStudent);
