@@ -532,13 +532,69 @@ console.log(age);
 
 
 // callback setTimeout 
-function greet(name, callback) {
-  console.log("Hello " + name);
-  callback();
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// function sayBye() {
+//   console.log("Goodbye!");
+// }
+
+// greet("Anshu", sayBye);
+
+
+
+
+// 
+const myPromise = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("Task completed");
+  } else {
+    reject("Task failed");
+  }
+});
+
+myPromise
+  .then(result => {
+    console.log(result);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+
+
+
+  // 
+  function fetchData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data received");
+    }, 2000);
+  });
 }
 
-function sayBye() {
-  console.log("Goodbye!");
+fetchData().then(data => {
+  console.log(data);
+});
+
+
+
+
+// 
+function checkNumber(num) {
+  return new Promise((resolve, reject) => {
+    if (num > 0) {
+      resolve("Positive number");
+    } else {
+      reject("Not positive");
+    }
+  });
 }
 
-greet("Anshu", sayBye);
+checkNumber(-5)
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
