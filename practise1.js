@@ -658,16 +658,16 @@ console.log(age);
 
 
 // Try and catch
-async function checkNumber(num) {
-  try {
-    if (num < 0) {
-      throw new Error("Negative number");
-    }
+// async function checkNumber(num) {
+//   try {
+//     if (num < 0) {
+//       throw new Error("Negative number");
+//     }
 
-    return "Valid number";
-  } catch (error) {
-    console.log(error.message);
-  }
-}
+//     return "Valid number";
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
 
-    checkNumber(-5);
+//     checkNumber(-5);
